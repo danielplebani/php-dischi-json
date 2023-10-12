@@ -1,19 +1,56 @@
-body{
+body {
     background-color: #1d2d3c;
 }
 
-header{
+header {
     background-color: rgba(0, 0, 0, 0.405);
     padding: 1rem 10rem;
 }
 
-i{
+i {
     color: #18d860;
-    font-size: 50px;
+    font-size: 40px;
 }
 
-.card{
-    width: calc(95% / 3);
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+.card {
+    width: calc(90% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #112030;
-    padding: 2rem;
+    padding: 10px 1.5rem;
+    cursor: pointer;
+}
+
+.songActive {
+    background-color: #1d2d3ce5;
+    width: calc(100% - 4rem);
+    height: calc(165% - 4rem);
+    margin: auto;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.songActive .card{
+    background-color: transparent;
+    border: none;
+    width: 20%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img{
+    cursor: pointer;
 }

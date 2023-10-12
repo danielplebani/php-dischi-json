@@ -36,16 +36,28 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
             <i class="fa-brands fa-spotify"></i>
         </header>
 
-        <main class="container d-flex gap-4 flex-wrap justify-content-center py-5">
+        <main class="container d-flex flex-wrap justify-content-center gap-3 py-3">
 
-            <div class="card text-white text-center" v-for="song in songs">
+            <div class="card text-white text-center" v-for="(song, index) in songs" @click="selectSong(index)">
                 <img :src="song.poster" class="card-img-top mb-3">
                 <h3 class="card-title mb-2">{{song.title}}</h3>
                 <span style="font-size: small;" class="mb-1">{{song.author}}</span>
                 <span style="font-size: medium;"><strong>{{song.year}}</strong></span>
             </div>
 
+
+            <div class="songActive" v-if="activeSong">
+                <div class="card text-white text-center">
+                    <img :src="songs[songNumber].poster" class="card-img-top mb-3">
+                    <h3 class="card-title mb-2">{{songs[songNumber].title}}</h3>
+                    <span style="font-size: small;" class="mb-1">{{songs[songNumber].author}}</span>
+                    <span style="font-size: medium;"><strong>{{songs[songNumber].year}}</strong></span>
+                </div>
+            </div>
+
         </main>
+
+
     </div>
 
 
