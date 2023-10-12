@@ -53,6 +53,10 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
                     <span style="font-size: small;" class="mb-1">{{songs[songNumber].author}}</span>
                     <span style="font-size: medium;"><strong>{{songs[songNumber].year}}</strong></span>
                 </div>
+
+                <div class="closeSong" @click="activeSong = false">
+                    <i class="fa-regular fa-circle-xmark" style="color: #ffffff;"></i>
+                </div>
             </div>
 
         </main>

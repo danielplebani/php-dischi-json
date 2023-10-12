@@ -49,8 +49,13 @@ i {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: auto;
 }
 
-img{
+.songActive .closeSong{
+    position: fixed;
+    top: 25%;
+    right: 37%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
 }
