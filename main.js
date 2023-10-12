@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      
+      songs: '',
     };
   },
 
@@ -11,7 +11,8 @@ createApp({
     axios
     .get("server.php")
     .then((response) => {
-      console.log(response);
+      //console.log(response.data);
+      this.songs = response.data
     });
   },
 }).mount("#app");

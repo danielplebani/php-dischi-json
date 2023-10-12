@@ -38,11 +38,11 @@ Al click su un disco, recuperare e mostrare i dati del disco selezionato.
 
         <main class="container d-flex gap-4 flex-wrap justify-content-center py-5">
 
-            <div class="card text-white text-center">
-                <img src="img.jpg" class="card-img-top mb-3">
-                <h4 class="card-title mb-2">title</h4>
-                <span style="font-size: small;" class="mb-1">autore</span>
-                <span style="font-size: medium;">data</span>
+            <div class="card text-white text-center" v-for="song in songs">
+                <img :src="song.poster" class="card-img-top mb-3">
+                <h3 class="card-title mb-2">{{song.title}}</h3>
+                <span style="font-size: small;" class="mb-1">{{song.author}}</span>
+                <span style="font-size: medium;"><strong>{{song.year}}</strong></span>
             </div>
 
         </main>
